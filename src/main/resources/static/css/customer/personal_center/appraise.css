@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f8f8f8;
+}
+.form-main{
+    background-color: #fff;
+    margin-top: 10px;
+    border: 1px solid rgb(255,107,55);
+    border-radius: 6px;
+}
+/*商品订单评价区*/
+.layui-field-title{
+    margin-top: 12px;
+}
+.orderpic{
+    width:100%;
+    height: 200px;
+    margin-top: 20px;
+    /* /* background-color: rgb(132, 236, 29); * / */
+}
+.orderpic img{/*商品图片*/
+    width:95%;
+    height: 200px;
+}
+.msg{
+    margin-top: 10px;
+}
+.ordermsg{/*商品信息*/
+    width:100%;
+    height: 200px;
+    margin-top: 10px;
+
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgb(255,107,55);
+    background-color: #fff;
+}
+.name{/*商品名字*/
+    width: 300px;
+    height: 50px;
+    margin-left: 70px;
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(255,107,55);
+
+}
+.name span{
+    font-size: 26px;
+    /*font-weight: 37px;*/
+}
+.score{/*商品评分区*/
+    width: 250px;
+    height: 30px;
+    margin-left: 50px;
+    background-color: #fff;
+}
+.o-cont{/*星星区*/
+    width: 120px;
+    height: 30px;
+
+}
+.o-star{/*星星*/
+    width: 400px;
+    height: 30px;
+    margin-top: -40px;
+}
+.score span{/*商品人均消费区*/
+    display: block;
+    float: left;
+    width: 180px;
+    height: 30px;
+    margin-left: 140px;
+    margin-top: -24px;
+
+}
+.score span{/*商品人均消费区 文字*/
+    font-size: 14px;
+    font-weight: bolder;
+}
+.order-aps{/*下单商品名称区*/
+    margin-left: 70px;
+    margin-top: 10px;
+
+}
+.order-aps span{/*下单商品名称区 文字*/
+    font-size: 14px;
+    line-height: 25px;
+}
+.order-score{/*商品评分*/
+    width: 100%;
+    margin-top: -20px;
+    margin-left: 20px;
+    /* border-bottom: 1px solid gray; */
+
+}
+/*.recommend{!*附近推荐区*!*/
+/*    width: 90%;*/
+/*    margin-left: 10px;*/
+/*    margin-top:10px;*/
+/*    float: left;*/
+/*    border: 1px solid rgb(255,107,55);*/
+/*    background-color: #fff;*/
+/*}*/
+/*.title{!*附近推荐 标题区*!*/
+/*    width: 240px;*/
+/*    height: 40px;*/
+/*    margin-top:20px;*/
+/*    margin-left: auto;*/
+
+/*}*/
+/*.title span{!*附近推荐 标题区 文字*!*/
+/*    font-weight: bolder;*/
+/*    font-size: 18px;*/
+/*}*/
+
+/*.recom{!*推荐商品区*!*/
+/*    width:100%;*/
+/*    height: 280px;*/
+/*    margin-bottom: 20px;*/
+
+
+/*}*/
+/*.recom-pic {*/
+/*    margin-left: 20px;*/
+/*}*/
+/*.recom-pic img{*/
+/*    width: 95%;*/
+/*    height: 200px;*/
+/*}*/
+/*.recom-msg{!* 推荐商品 店名、评分、人均消费 信息区*!*/
+/*    width: 100%;*/
+
+/*}*/
+/*.info{!* 推荐商品 店名*!*/
+/*    width: 90%;*/
+/*    float: left;*/
+/*    margin-left: 10px;*/
+/*}*/
+/*.info span{!* 推荐商品 店名  文字*!*/
+/*    font-size: 15px;*/
+/*    font-weight: bolder;*/
+/*}*/
+/*.layui-rate {*/
+/*    padding: 10px 5px 10px 0;*/
+/*    font-size: 0;*/
+/*    margin-left: 10px;*/
+/*}*/
+
+
+/*评价div*/
+.evaluation_div{
+    width: 600px;
+    /* background-color: aqua; */
+    padding: 20px 25px 20px 0;
+}
+.score_div{
+    margin: 15px 0 0 0 ;
+}
+.layui-btn{
+    text-align: right;
+    margin: 10px 0 0 25px;
+}
+
+.upload_div img{
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.upload_a{
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.myimg{
+    opacity: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size:0;
+    cursor:pointer;
+}
+.upload_icon{
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-image: url(https://zhangxu-1023.oss-cn-nanjing.aliyuncs.com/images/details_shop/2022-10-20/%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87.svg);
+    background-repeat: no-repeat;
+}

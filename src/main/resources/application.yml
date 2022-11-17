@@ -1,0 +1,67 @@
+server:
+  servlet:
+    context-path: /fan
+spring:
+  elasticsearch:
+    uris: localhost:9200
+#静态资源
+  web:
+    resources:
+      static-locations: classpath:templates/,classpath:static/
+  #thymeleaf组件
+  thymeleaf:
+    prefix: classpath:templates/
+    suffix: .html
+    cache: false
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.103.61.23:3306/fantuanfood?characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: zhangxu1023
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirm-type: correlated  # 生产者发送消息到交换机 消息确认
+    publisher-returns: true  # 交换机绑定到队列 消息确认
+    listener:
+      simple:
+        acknowledge-mode: manual  #消息手动确认
+        concurrency: 3 #消费者数量
+        max-concurrency: 10  #消费者最大数量
+        prefetch: 1  #消费者每次从队列中取几个消息
+        default-requeue-rejected: true #消息消费失败后，重新进入消费队列中
+        retry:
+          initial-interval: 1000 #1秒后重试
+          enabled: true #启用发布重试
+          max-attempts: 4 #传递消息的最大尝试次数
+          max-interval: 10000 #尝试的最大时间间隔
+          multiplier: 1.0 #应用于先前传递重试时间间隔的乘数
+  redis:
+    database: 0
+    host: 47.103.61.23
+    port: 6379
+    password: zhangxu
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+
+#  web:
+#    resources:
+#      static-locations: classpath:static/*
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+  type-aliases-package: com.entity
+  mapper-locations: classpath:com/chixing/mapper/*.xml
